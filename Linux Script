@@ -40,11 +40,14 @@ def bad_programs():
     
     
 def media_files():
-users_choice = '''
-    Please chose one of the following
-    1. Configure your users
-    2. Configure your groups (coming soon)
-    3. Find bad programs (coming soon)
-    4. Find unauthorized media files (coming soon)
-'''
-print(user_choice)
+print('Please chose one of the following')
+print('1. Configure your users')
+print('2. Configure your groups (coming soon)')
+print('3. Find bad programs (coming soon)')
+print('4. Find unauthorized media files (coming soon)')
+a = int(input())
+if a == 1:
+    users()
+else:
+    print('What part of coming soon do you not understand?')
+    print('Start over and try again.')
