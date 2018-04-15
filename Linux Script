@@ -48,10 +48,13 @@ Please chose one of the following
 4. Find unauthorized media files (coming soon)
 
 '''
-user_choice = int(input('{}'.format(options)))
+user_choice = 2
+while user_choice != 1:
+    
+    user_choice = int(input('{}'.format(options)))
 
-if user_choice == 1:
-    users()
-else:
-    print('What part of coming soon do you not understand?')
-    print('Start over and try again.')
+    if user_choice == 1:
+        users()
+    else:
+        print('What part of coming soon do you not understand?')
+        print('Lets try this again, maybe we should listen to directions this time.')
