@@ -21,32 +21,37 @@ def users():
         if user not in users_actual:
             add_user = input('Would you like to add the user {} becuase they are not currently on this system (y, n): '.format(user))
     
-        if add_user == 'y':
-            subprocess.call('adduser {}'.format(user))
+            if add_user == 'y':
+                subprocess.call('adduser {}'.format(user))
 
     for user in users_actual:
     
         if user not in users_authorized:
             remove_user = input('Would you like to remove the user {} because they are currently on this system even though they should not (y, n): '.format(user))
     
-        if remove_user == 'y':
-            subprocess.call('deluser {}'.format(user))
+            if remove_user == 'y':
+                subprocess.call('deluser {}'.format(user))
 
-def groups():
+#def groups():
     
 def bad_programs():
     programs = ['aircrack-ng', 'apache', 'brutus', 'cain', 'chkrootkit', 'crack', 'ettercap', 'ftp', 'hping', 'hydra', 'John', 'kismet', 'maltego', 'metasploit', 'nessus', 'netcat', 'nikto', 'mysql', 'nmap', 'ophcrack', 'owasp-zed', 'postgresql', 'rainbow-crack', 'samba', 'snort', 'tcpdump', 'telnet', 'thc-hydra', 'winzapper', 'wireshark']
             subprocess.call('deluser {}'.format(user))
     
     
-def media_files():
-print('Please chose one of the following')
-print('1. Configure your users')
-print('2. Configure your groups (coming soon)')
-print('3. Find bad programs (coming soon)')
-print('4. Find unauthorized media files (coming soon)')
-a = int(input())
-if a == 1:
+#def media_files():
+options = '''
+Please chose one of the following
+
+1. Configure your users
+2. Configure your groups (coming soon)
+3. Find bad programs (coming soon)
+4. Find unauthorized media files (coming soon)
+
+'''
+user_choice = int(input('{}'.format(options)))
+
+if user_choice == 1:
     users()
 else:
     print('What part of coming soon do you not understand?')
