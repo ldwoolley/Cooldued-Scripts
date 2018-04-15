@@ -35,7 +35,7 @@ def users():
 def groups():
     
 def bad_programs():
-    programs = ['aircrack', 'apache', 'brutus', 'cain', 'chkrootkit', 'crack', 'ettercap', 'ftp', 'hping', 'hydra', 'John', 'kismet', 'maltego', 'metasploit', 'nessus', 'netcat', 'nikto', 'mysql', 'nmap', 'ophcrack', 'owasp-zed', 'postgresql', 'rainbow-crack', 'samba', 'snort', 'tcpdump', 'telnet', 'thc-hydra', 'winzapper', 'wireshark']
+    programs = ['aircrack-ng', 'apache', 'brutus', 'cain', 'chkrootkit', 'crack', 'ettercap', 'ftp', 'hping', 'hydra', 'John', 'kismet', 'maltego', 'metasploit', 'nessus', 'netcat', 'nikto', 'mysql', 'nmap', 'ophcrack', 'owasp-zed', 'postgresql', 'rainbow-crack', 'samba', 'snort', 'tcpdump', 'telnet', 'thc-hydra', 'winzapper', 'wireshark']
             subprocess.call('deluser {}'.format(user))
     
     
