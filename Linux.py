@@ -52,7 +52,7 @@ def passwd():
             change_passwd = input('Would you like to change the password of {} to {} (y, n)'.format(user, password))
             if change_passwd == 'y':
                 os.system('passwd {} --stdin {}'.format(user, password))
-            elif change_passwd = 'n':
+            elif change_passwd == 'n':
                 print('Okay')
             else:
                 print('Could you please follow direction and answer with a y or n')
