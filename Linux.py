@@ -40,7 +40,8 @@ def users():
     
                 if remove_user == 'y':
                     subprocess.call('deluser {}'.format(user))
-                
+
+def passwd():
     password = input('What password would you like to change all of your users to: ')
     
     for user in user_passwd:
@@ -55,7 +56,6 @@ def users():
                 print('Okay')
             else:
                 print('Could you please follow direction and answer with a y or n')
-
 #def groups():
     
 def bad_programs():
@@ -88,18 +88,21 @@ options = '''
 Please chose one of the following
 
 1. Configure your users
-2. Configure your groups (coming soon)
-3. Find bad programs (coming soon)
-4. Find unauthorized media files (coming soon)
+2. Change user passwords
+3. Configure your groups (coming soon)
+4. Find bad programs (coming soon)
+5. Find unauthorized media files (coming soon)
 
 '''
 user_choice = 2
-while user_choice != 1:
+while user_choice != 1 or 2:
     
     user_choice = int(input('{}'.format(options)))
 
     if user_choice == 1:
         users()
+    elif user_choice == 2:
+        passwd()
     else:
         print('What part of coming soon do you not understand?')
         print('Lets try this again, maybe we should listen to directions this time.')
