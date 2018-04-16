@@ -1,4 +1,4 @@
-import subprocess
+import subprocess, os
 
 def users():
     users_actual = []
