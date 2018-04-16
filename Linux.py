@@ -33,7 +33,7 @@ def users():
     for user in users_actual:
         
         remove_user = 'q'
-        while remove_user ! 'y' or 'n':
+        while remove_user != 'y' or 'n':
             
             if user not in users_authorized:
                 remove_user = input('Would you like to remove the user {} because they are currently on this system even though they should not (y, n): '.format(user))
