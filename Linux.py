@@ -48,7 +48,7 @@ def passwd():
         
         change_passwd = 'q'
         
-        while change_password != 'y' or 'n';
+        while change_password != 'y' or 'n':
             change_passwd = input('Would you like to change the password of {} to {} (y, n)'.format(user, password))
             if change_passwd == 'y':
                 os.system('passwd {} --stdin {}'.format(user, password))
