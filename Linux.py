@@ -2,6 +2,7 @@ import subprocess
 
 def users():
     users_actual = []
+    user_passwd = []
     
     #list of default system users for Ubuntu
     users_authorized = ["root", "daemon", "bin", "sys", "sync", "games", "man", "lp", "mail", "news", "uucp", "proxy", "www-data", "backup", "list", "irc", "gnats", "nobody", "systemd-timesync", "systemd-network", "systemd-resolve", "systemd-bus-proxy", "syslog", "_apt", "messagebus", "uuidd", "lightdm", "whoopsie", "avahi-autoipd", "avahi", "dnsmasq", "colord", "speech-dispatcher", "hplip", "kernoops", "pulse", "rtkit", "saned", "usbmux", "guest-lncgoz"]
@@ -15,7 +16,8 @@ def users():
 
         user_name = input('What is the name of user {}: '.format(i))
         users_authorized.append(user_name)
-    
+        users_passwd.append(user_name)
+        
     #adds users missing from the system
     for user in users_authorized:
         
@@ -38,6 +40,21 @@ def users():
     
                 if remove_user == 'y':
                     subprocess.call('deluser {}'.format(user))
+                
+    password = input('What password would you like to change all of your users to: ')
+    
+    for user in user_passwd:
+        
+        change_passwd = 'q'
+        
+        while change_password != 'y' or 'n';
+            change_passwd = input('Would you like to change the password of {} to {} (y, n)'.format(user, password))
+            if change_passwd == 'y':
+                os.system('passwd {} --stdin {}'.format(user, password))
+            elif change_passwd = 'n':
+                print('Okay')
+            else:
+                print('Could you please follow direction and answer with a y or n')
 
 #def groups():
     
