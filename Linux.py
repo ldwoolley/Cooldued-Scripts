@@ -85,9 +85,8 @@ while user_choice != 1:
     
 #def media_files():
 mistake = '''
-What part of coming soon do you not understand?
-Let's try this again.
-Maybe this time you will follow directions
+Sorry, this featur is not available yet
+Please pick an option that is availible
 '''
 
 options = '''
@@ -98,6 +97,7 @@ Please chose one of the following
 3. Configure your groups (coming soon)
 4. Find bad programs (coming soon)
 5. Find unauthorized media files (coming soon)
+6. Exit
 
 '''
 user_choice = 2
@@ -124,6 +124,9 @@ while user_choice != 1 or 2:
     elif user_choice == 5:
         print(mistake)
         options = options.replace('5. Find unauthorized media files (coming soon)', '')
+        
+    elif user_choice == 6:
+        break
         
     else:
         print(mistake)
