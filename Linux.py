@@ -84,6 +84,12 @@ while user_choice != 1:
         print('Lets try this again, maybe we should listen to directions this time.')
     
 #def media_files():
+mistake = '''
+What part of coming soon do you not understand?
+Let's try this again.
+Maybe this time you will follow directions
+'''
+
 options = '''
 Please chose one of the following
 
@@ -102,28 +108,22 @@ while user_choice != 1 or 2:
     if user_choice == 1:
         users()
         options = options.replace('1. Configure your users', '')
+        
     elif user_choice == 2:
         passwd()
-        
         options = options.replace('2. Change user passwords', '')
+        
     elif user_choice == 3:
-        
-        print('What part of coming soon do you not understand?')
-        print('Lets try this again, maybe we should listen to directions this time.')
-        
+        print(mistake)
         options = options.replace('3. Configure your groups (coming soon)', '')
+        
     elif user_choice == 4:
-        
-        print('What part of coming soon do you not understand?')
-        print('Lets try this again, maybe we should listen to directions this time.')
-        
+        print(mistake)
         options = options.replace('4. Find bad programs (coming soon)', '')
+        
     elif user_choice == 5:
-        
-        print('What part of coming soon do you not understand?')
-        print('Lets try this again, maybe we should listen to directions this time.')
-        
+        print(mistake)
         options = options.replace('5. Find unauthorized media files (coming soon)', '')
+        
     else:
-        print('What part of coming soon do you not understand?')
-        print('Lets try this again, maybe we should listen to directions this time.')
+        print(mistake)
