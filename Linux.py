@@ -11,10 +11,10 @@ def users():
     users_actual = subprocess.Popen(["cut -d: -f1 /etc/passwd"], shell=True, stdout=subprocess.PIPE).stdout.read().decode('utf-8').splitlines()
 
     #collects the list of users that are suppost to be on the system
-    users_total = input('How many users do you have: ')
+    users_total = (input('How many users do you have: ')
     for i in range(0, int(users_total)):
 
-        user_name = input('What is the name of user {}: '.format(i))
+        user_name = .lower(input('What is the name of user {}: '.format(i)))
         users_authorized.append(user_name)
         users_passwd.append(user_name)
         
@@ -25,7 +25,7 @@ def users():
         while add_user != 'y' or 'n':
             
             if user not in users_actual:
-                add_user = input('Would you like to add the user {} becuase they are not currently on this system (y, n): '.format(user))
+                add_user = .lower(input('Would you like to add the user {} becuase they are not currently on this system (y, n): '.format(user)))
     
                 if add_user == 'y':
                     subprocess.call('adduser {}'.format(user))
@@ -36,7 +36,7 @@ def users():
         while remove_user != 'y' or 'n':
             
             if user not in users_authorized:
-                remove_user = input('Would you like to remove the user {} because they are currently on this system even though they should not (y, n): '.format(user))
+                remove_user = .lower(input('Would you like to remove the user {} because they are currently on this system even though they should not (y, n): '.format(user)))
     
                 if remove_user == 'y':
                     subprocess.call('deluser {}'.format(user))
